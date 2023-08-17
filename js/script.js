@@ -1,4 +1,5 @@
-/* const pokemonList = document.getElementById("pokemon-list");
+
+const pokemonList = document.getElementById("pokemon-list");
 const prevButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 
@@ -26,39 +27,40 @@ function fetchPokemonData(url) {
       displayPokemon(data);
     });
 }
-// Funcion para mostrar todos los pokemon
+
 function displayPokemon(pokemon) {
-  const pokemonCard = document.createElement("div");
+  const pokemonCard = document.createElement("button");
   pokemonCard.classList.add("pokemon-card");
+
+  // Agregar evento de clic para mostrar detalles
+  pokemonCard.addEventListener("click", () => {
+    fetchPokemonDetails(pokemon.url);
+  });
+
   const types = pokemon.types.map(type => type.type.name).join(", ");
   pokemonCard.innerHTML = `
-    <button class="details-button" data-url="${pokemon.url}">
-      <img src="${pokemon.sprites.other["official-artwork"].front_default}" alt="${pokemon.name}">
-      <h2>${pokemon.name.toUpperCase()}</h2>
-      <p>${pokemon.id}</p>
-      <p>${types.toUpperCase()}</p>
-    </button>
+    <div class="pokemons btn-pokemons">
+      <p class="pokemon-id-back">#${pokemon.id}</p>
+      <div class="pokemon-img">
+        <img src="${pokemon.sprites.other["official-artwork"].front_default}" alt="${pokemon.name}">
+      </div>
+      <div class="pokemon-info">
+        <div class="info-container">
+          <p class="pokemon-id">#${pokemon.id}</p>
+          <h2 class="pokemon-name">${pokemon.name}</h2>
+        </div>
+        <div class="pokemons-type">
+          ${types}
+        </div>
+      </div>
+    </div>
   `;
   pokemonList.appendChild(pokemonCard);
-} */
-
-/* // Funcion para agregar evento para abrir ventana modal
-function fetchPokemonDetails(url){
-  fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    showPokemonDetailsModal(data);
-  });
 }
 
-function displayPokemon(pokemon){
-  const pokemonCard = document.createElement("div");
-} */
 
-
-
-// Funciones para botones de paginacion
-/* prevButton.addEventListener("click", () => {
+// Funciones para botones de paginación
+prevButton.addEventListener("click", () => {
   if (offset > 0) {
     offset -= 151;
     fetchPokemonList(offset);
@@ -70,5 +72,5 @@ nextButton.addEventListener("click", () => {
   fetchPokemonList(offset);
 });
 
+// Cargar la lista inicial de Pokémon
 fetchPokemonList(offset);
- */
