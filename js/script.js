@@ -31,8 +31,6 @@ function fetchPokemonData(url) {
 function displayPokemon(pokemon) {
   const pokemonCard = document.createElement("button");
   pokemonCard.classList.add("pokemon-card");
-
-  // Agregar evento de clic para mostrar detalles
   pokemonCard.addEventListener("click", () => {
     fetchPokemonDetails(pokemon.url);
   });
