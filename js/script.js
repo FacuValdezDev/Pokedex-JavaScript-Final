@@ -107,3 +107,79 @@ nextButton.addEventListener("click", () => {
 });
 
 fetchPokemonList(0);
+
+
+// Función para filtrar Pokémon por tipo
+
+const filterButtons = document.querySelectorAll(".btn-header");
+const viewAllButton = document.getElementById("view-all");
+
+const pokemonTypes = [
+  "normal", "fire", "water", "grass", "electric", "ice", "fighting",
+  "poison", "ground", "flying", "psychic", "bug", "rock", "ghost",
+  "dark", "dragon", "steel", "fairy"
+];
+
+// Boton de filtro
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const filterType = button.id;
+    filterPokemonsByType(filterType);
+  });
+});
+
+viewAllButton.addEventListener("click", () => {
+  const allPokemonCards = document.querySelectorAll(".pokemon-card");
+  allPokemonCards.forEach(pokemonCard => {
+    pokemonCard.style.display = "block";
+  });
+});
+
+function filterPokemonsByType(type) {
+  const allPokemonCards = document.querySelectorAll(".pokemon-card");
+
+  allPokemonCards.forEach(pokemonCard => {
+    const typesContainer = pokemonCard.querySelector(".pokemons-type-container");
+    const typeElements = typesContainer.querySelectorAll(".pokemons-type");
+
+    let hasMatchingType = false;
+    typeElements.forEach(typeElement => {
+      if (typeElement.textContent.toLowerCase() === type) {
+        hasMatchingType = true;
+      }
+    });
+
+    if (hasMatchingType || type === "view-all") {
+      pokemonCard.style.display = "block";
+    } else {
+      pokemonCard.style.display = "none";
+    }
+  });
+}
+const searchInput = document.getElementById("pokemon");
+const searchButton = document.querySelector(".buttonSearch");
+
+searchInput.addEventListener("input", () => {
+  const searchText = searchInput.value.toLowerCase();
+  searchPokemons(searchText);
+});
+
+// Función para buscar Pokémon por nombre
+function searchPokemons(searchText) {
+  const allPokemonCards = document.querySelectorAll(".pokemon-card");
+
+  allPokemonCards.forEach(pokemonCard => {
+    const pokemonName = pokemonCard.querySelector(".pokemon-name").textContent.toLowerCase();
+    if (pokemonName.includes(searchText)) {
+      pokemonCard.style.display = "block";
+    } else {
+      pokemonCard.style.display = "none";
+    }
+  });
+}
+
+searchButton.addEventListener("click", event => {
+  event.preventDefault(); 
+  const searchText = searchInput.value.toLowerCase();
+  searchPokemons(searchText);
+});

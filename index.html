@@ -16,7 +16,7 @@
         />
         <div class="pokedex-search">
           <form action="" id="searchPokemon" class="poke-search">
-            <input type="text" id="pokemon" />
+            <input type="text" id="pokemon" autocomplete="off" />
             <button class="buttonSearch">
               <img
                 src="/assets/img//pokeball-removebg-preview (3).png"
@@ -27,8 +27,6 @@
           </form>
         </div>
       </nav>
-    </header>
-    <main>
       <div>
         <ul class="nav-list">
           <li class="nav-item">
@@ -94,10 +92,12 @@
           </li>
         </ul>
       </div>
+    </header>
+    <main>
       <div id="pokedex">
         <div id="pagination">
-          <button id="prev-btn">Anterior</button>
-          <button id="next-btn">Siguiente</button>
+          <button id="prev-btn">Prev Generation</button>
+          <button id="next-btn">Next Generation</button>
         </div>
         <div id="pokemon-list" class="allPoke"></div>
       </div>

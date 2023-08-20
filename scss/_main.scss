@@ -14,12 +14,38 @@ main {
     background-color: var(--clr-white);
     box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
     border: 1px solid var(--clr-gray);
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+  }
+  #prev-btn:hover{
+    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
   }
   #next-btn {
     padding: 5px 40px;
     background-color: var(--clr-white);
     box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
     border: 1px solid var(--clr-gray);
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+  }
+  #next-btn:hover{
+    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
   }
 }
 .allPoke {
@@ -116,7 +142,6 @@ main {
   padding: 0.25rem 0.5rem;
 }
 
-/* Ejemplo de estilos CSS para los tipos de Pokémon */
 .pokemons-type-container {
   display: flex;
   justify-content: center;
@@ -127,7 +152,6 @@ main {
   margin-right: 8px;
 }
 
-/* Agregar estilos para los demás tipos de Pokémon */
 
 @media screen and (min-width: 480px) {
   .allPoke {
