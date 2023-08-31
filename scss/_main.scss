@@ -6,7 +6,7 @@ main {
 
 #pagination {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 5rem;
   padding-bottom: 20px;
   #prev-btn {
@@ -152,17 +152,6 @@ main {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 480px) {
-  .allPoke {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 700px) {
-  .allPoke {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 /* Estilos generales de la ventana modal */
 .modal {
   display: none;
@@ -211,4 +200,32 @@ main {
 }
 .modal-pokemon-details {
   font-family: sans-serif;
+}
+
+@media screen and (min-width: 480px) {
+  .allPoke {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 700px) {
+  .allPoke {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pagination {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    #prev-btn {
+      width: auto;
+      font-weight: 500;
+      padding: 5px;
+    }
+    #next-btn {
+      width: auto;
+      font-weight: 500;
+      padding: 5px;
+    }
+  }
 }

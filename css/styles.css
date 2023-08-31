@@ -208,6 +208,15 @@ nav .pokedex-search .poke-search input {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (max-width: 768px) {
+  nav {
+    background-size: auto;
+    background-position: 0 80%;
+  }
+  nav .pokemon-logo {
+    width: 100%;
+  }
+}
 main {
   padding: 2rem;
   max-width: 1000px;
@@ -216,7 +225,7 @@ main {
 
 #pagination {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 5rem;
   padding-bottom: 20px;
 }
@@ -373,16 +382,6 @@ main {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 480px) {
-  .allPoke {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (min-width: 700px) {
-  .allPoke {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 /* Estilos generales de la ventana modal */
 .modal {
   display: none;
@@ -435,6 +434,33 @@ main {
   font-family: sans-serif;
 }
 
+@media screen and (min-width: 480px) {
+  .allPoke {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 700px) {
+  .allPoke {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pagination {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  #pagination #prev-btn {
+    width: auto;
+    font-weight: 500;
+    padding: 5px;
+  }
+  #pagination #next-btn {
+    width: auto;
+    font-weight: 500;
+    padding: 5px;
+  }
+}
 .modal {
   display: none;
   position: fixed;

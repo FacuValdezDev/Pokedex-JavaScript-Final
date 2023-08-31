@@ -79,3 +79,13 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    background-size: auto;
+    background-position: 0 80%;
+    .pokemon-logo {
+      width: 100%;
+    }
+  }
+}
