@@ -25,7 +25,7 @@ https://facundovaldez-pokedex.netlify.app
 
 ## Screenshots
 
-![App Screenshot]([https://drive.google.com/uc?id=1i6ByaC0l7C_nDGWNoaCCh_2o-SZtb5dZ](https://drive.google.com/file/d/1FHotugJfdw0Z9jLPAKCLEzIjjAxz7M07/view?usp=drive_link))
+![App Screenshot](https://drive.google.com/file/d/1FHotugJfdw0Z9jLPAKCLEzIjjAxz7M07/view?usp=sharing)
 
 
 ![App Screenshot]([https://drive.google.com/uc?id=1WcYXQBnlUJ_OIhdT1XeCeHC42cdexz0E](https://drive.google.com/file/d/1d35QwoQZNizGPSjzfNufJc9G-uyrQty8/view?usp=drive_link)https://drive.google.com/file/d/1d35QwoQZNizGPSjzfNufJc9G-uyrQty8/view?usp=drive_link)
