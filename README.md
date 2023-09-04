@@ -13,8 +13,6 @@ https://facundovaldez-pokedex.netlify.app
 
 
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
 
 ## Tech Stack
 
@@ -24,11 +22,6 @@ https://facundovaldez-pokedex.netlify.app
 
 
 ## Screenshots
-
-![Screenshot](https://drive.google.com/file/d/1FHotugJfdw0Z9jLPAKCLEzIjjAxz7M07/view?usp=sharing)
-
-
-![App Screenshot]([https://drive.google.com/uc?id=1WcYXQBnlUJ_OIhdT1XeCeHC42cdexz0E](https://drive.google.com/file/d/1d35QwoQZNizGPSjzfNufJc9G-uyrQty8/view?usp=drive_link)https://drive.google.com/file/d/1d35QwoQZNizGPSjzfNufJc9G-uyrQty8/view?usp=drive_link)
-
-
-![App Screenshot]([https://drive.google.com/uc?id=1x6TTqmx6PdiSwpn1z0ctHMGnK1JqVdyV](https://drive.google.com/file/d/1fwKX76aIUBrvg_BGLMGAEyaw9SGlwiDq/view?usp=drive_link)https://drive.google.com/file/d/1fwKX76aIUBrvg_BGLMGAEyaw9SGlwiDq/view?usp=drive_link)
+![header pokedex](https://github.com/FacuValdezDev/Pokedex-JavaScript-Final/assets/131462142/6b84d39c-f9fc-42f6-8a45-876b4dc70bc7)
+![main pokedex](https://github.com/FacuValdezDev/Pokedex-JavaScript-Final/assets/131462142/a0990f90-41be-4114-8f4a-3758d7492cf1)
+![main generacion 2 pokedex](https://github.com/FacuValdezDev/Pokedex-JavaScript-Final/assets/131462142/0097b85b-43ce-4400-a209-49b6f1e8459e)
