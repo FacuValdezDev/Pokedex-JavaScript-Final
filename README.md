@@ -4,7 +4,7 @@ Proyecto final para el curso de JavaScript en Coderhouse.
 
 Pokedex inspirada en el Juego de Pokemon. 
 
-En esta pagina web realizada con JavaScript se pueden conocer los 151 pokemons de 7 generaciones diferentes, donde se detalla el tipo de pokemon y sus rasgos, al clickear en algun pokemon se abriba una ventana modal con informacion detallada de los mismos, mas arriba en la seccion del header se puede apreciar un barra de search que busca el pokemon solicitado en tiempo real y mas por debajo se encuentra una seccion dentro del main, donde se puede elegir que tipo de pokemon quieres y estos se muestren en pantalla.
+En está pagina web realizada con JavaScript se pueden conocer los 151 pokemons de 7 generaciones diferentes, donde se detalla el tipo de pokemon y sus rasgos. Al clickear en algun pokemon se abrira una ventana modal con información detallada de los mismos, mas arriba en la seccion del header se puede apreciar un barra de search que busca el pokemon solicitado en tiempo real y mas por debajo se encuentra una seccion dentro del main, donde se puede elegir que tipo de pokemon quieres y estos se muestren en pantalla.
 
 
 ## Demo
