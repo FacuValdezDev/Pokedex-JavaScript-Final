@@ -7,7 +7,6 @@ const limit = 151;
 const maxGenerations = 7;
 let currentPage = 1;
 
-
 /*Llamado a la poke api*/
 function fetchPokemonList(offset) {
   const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
@@ -213,38 +212,60 @@ function openModal(pokemon) {
   const modalName = document.getElementById("modal-pokemon-name");
   const modalDetails = document.getElementById("modal-pokemon-details");
   const stats = pokemon.stats;
+  const paddedId = String(pokemon.id).padStart(3, "0");
+  const types = pokemon.types
+    .map((type) => {
+      const typeClass = type.type.name;
+      return `<div class="pokemons-types ${typeClass} type">${type.type.name}</div>`;
+    })
+    .join(" ");
 
-  // Código para mostrar estadísticas
+  // Mostrar detalles de pokemon en ventana modal
   const statsHTML = `
     <div class="pokemon-stats-info active">
-    <div>#${pokemon.id}</div>
+    <div class="pokeIdmodal">#${paddedId}</div>
+    <div class="pokemons-type type-modal">${types}</div>
     <div class="pokemon-img-modal">
         <img src="${pokemon.sprites.other["official-artwork"].front_default}" alt="${pokemon.name}">
       </div>
       <div>
-        <h3 class="modal-title">STATS</h3>
-        <div>Height: ${pokemon.height}m</div>
-        <div>Weight: ${pokemon.weight}kg</div>
         <h3 class="modal-title">SKILLS</h3>
         <div class="skills">
           <ul>
-            <li class="skills__item">PS: ${stats[0].base_stat}</li>
-            <div class="skills__bar skills__bar--30"></div>
-            <li class="skills__item">Daño: ${stats[1].base_stat}</li>
-            <div class="skills__bar skills__bar--60"></div>
-            <li class="skills__item">Defensa: ${stats[2].base_stat}</li>
-            <div class="skills__bar skills__bar--40"></div>
-            <li class="skills__item">Ataque Especial: ${stats[3].base_stat}</li>
-            <div class="skills__bar skills__bar--20"></div>
-            <li class="skills__item">Defensa Especial: ${stats[4].base_stat}</li>
-            <div class="skills__bar skills__bar--60"></div>
-            <li class="skills__item">Velocidad: ${stats[5].base_stat}</li>
-            <div class="skills__bar skills__bar--70"></div>
+            <li class="skills__item">PS → ${stats[0].base_stat}</li>
+            <div class="ps-bar progress-bar">
+            <div class="bar"></div>
+            </div>
+            <li class="skills__item">Attack → ${stats[1].base_stat}</li>
+            <div class="attack-bar progress-bar">
+            <div class="bar"></div>
+            </div>
+            <li class="skills__item">Defense → ${stats[2].base_stat}</li>
+            <div class="defense-bar progress-bar">
+            <div class="bar"></div>
+            </div>
+            <li class="skills__item">Especial Attack → ${stats[3].base_stat}</li>
+            <div class="espAtk-bar progress-bar">
+              <div class="bar"></div>
+            </div>
+            <li class="skills__item">Especial Defence → ${stats[4].base_stat}</li>
+            <div class="espDfc progress-bar">
+            <div class="bar"></div>
+           </div>
+            <li class="skills__item">Velocity → ${stats[5].base_stat}</li>
+            <div class="velocity progress-bar">
+            <div class="bar"></div>
+            </div>
           </ul>
       </div>
-      </>
+      <div class="modal-stats">
+          <h3 class="modal-title">STATS</h3>
+          <div>Height: ${pokemon.height}M</div>
+          <div>Weight: ${pokemon.weight}KG</div>
+        </div>
     </div>
   `;
+
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
@@ -256,7 +277,7 @@ function openModal(pokemon) {
   modal.style.display = "block";
   modalName.textContent = pokemon.name;
 
-  // Agregar un botón para cerrar la ventana modal
+  // Boton para cerrar modal
   const closeButton = document.getElementById("modal-close-button");
   closeButton.addEventListener("click", () => {
     modal.style.display = "none";
