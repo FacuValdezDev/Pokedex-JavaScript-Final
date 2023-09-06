@@ -7,6 +7,8 @@ const limit = 151;
 const maxGenerations = 7;
 let currentPage = 1;
 
+
+/*Llamado a la poke api*/
 function fetchPokemonList(offset) {
   const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
 
@@ -34,7 +36,6 @@ function displayPokemon(pokemon) {
   pokemonCard.classList.add("pokemon-card");
   pokemonCard.addEventListener("click", () => {
     openModal(pokemon);
-    // Código para mostrar detalles del Pokémon
   });
 
   // Formatear el número de ID del Pokémon
@@ -221,10 +222,27 @@ function openModal(pokemon) {
         <img src="${pokemon.sprites.other["official-artwork"].front_default}" alt="${pokemon.name}">
       </div>
       <div>
-        <h3>STATS</h3>
+        <h3 class="modal-title">STATS</h3>
         <div>Height: ${pokemon.height}m</div>
         <div>Weight: ${pokemon.weight}kg</div>
+        <h3 class="modal-title">SKILLS</h3>
+        <div class="skills">
+          <ul>
+            <li class="skills__item">PS: ${stats[0].base_stat}</li>
+            <div class="skills__bar skills__bar--30"></div>
+            <li class="skills__item">Daño: ${stats[1].base_stat}</li>
+            <div class="skills__bar skills__bar--60"></div>
+            <li class="skills__item">Defensa: ${stats[2].base_stat}</li>
+            <div class="skills__bar skills__bar--40"></div>
+            <li class="skills__item">Ataque Especial: ${stats[3].base_stat}</li>
+            <div class="skills__bar skills__bar--20"></div>
+            <li class="skills__item">Defensa Especial: ${stats[4].base_stat}</li>
+            <div class="skills__bar skills__bar--60"></div>
+            <li class="skills__item">Velocidad: ${stats[5].base_stat}</li>
+            <div class="skills__bar skills__bar--70"></div>
+          </ul>
       </div>
+      </>
     </div>
   `;
   window.addEventListener("click", (event) => {
